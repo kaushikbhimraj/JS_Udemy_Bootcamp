@@ -7,6 +7,19 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+	// Create two pointer that start on either sides of thestring. 
+	let left = 0;
+	let right = str.length - 1;
+
+	while (left < right){
+		if (str.charAt(left) != str.charAt(right)){
+			return false;
+		}
+		left++;
+		right--;
+	}
+	return true;
+}
 
 module.exports = palindrome;
